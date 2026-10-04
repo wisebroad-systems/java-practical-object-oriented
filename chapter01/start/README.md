@@ -37,7 +37,7 @@ java -cp out Main
 
 ## 任意：Gradleで実行する
 
-リポジトリのルートで、次のコマンドを実行します。
+リポジトリのルートで、次のコマンドを実行します。Windowsで日本語が文字化けする場合は、ルートの[README](../../README.md#windowsで日本語が文字化けする場合)を参照してください。
 
 ```powershell
 .\gradlew.bat :chapter01-start:run

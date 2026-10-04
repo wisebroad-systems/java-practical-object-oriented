@@ -65,6 +65,16 @@ java -cp out Main
 
 テストはJUnit 6、整形はSpotless（Javaはgoogle-java-formatのAOSPスタイル、Gradleの設定はktfmt）を使っています。
 
+### Windowsで日本語が文字化けする場合
+
+PowerShellでGradleから実行すると、実行結果の日本語が文字化けすることがあります。GradleがUTF-8で画面に出力するのに対し、日本語版Windowsのコンソールは、既定でShift_JIS（コードページ932）として表示するためです。その場合は、同じPowerShellのウィンドウで次の1行を実行してから、Gradleのコマンドを実行してください。
+
+```powershell
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+```
+
+この設定は、そのウィンドウを閉じるまで有効です。本書の標準の手順（`javac`と`java`）は、この設定をしなくても正しく表示されます。
+
 ## 動作確認の範囲
 
 動作確認の対象は、Java 25・Windows 11の実機と、GitHub ActionsのUbuntu 24.04です。いずれも準備中で、検証の結果は公開時にここへ記載します。
