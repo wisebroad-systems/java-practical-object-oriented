@@ -1,0 +1,14 @@
+# 手動実行（javac -d out）の出力
+out/
+
+# Gradle
+.gradle/
+build/
+.kotlin/
+
+# IDE・OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db

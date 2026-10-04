@@ -1,0 +1,10 @@
+# 既定はテキストとして扱い、リポジトリ内はLFで保存する
+* text=auto eol=lf
+
+# Windowsのバッチファイルだけは、作業ツリーでもCRLFにする
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# バイナリ
+*.jar binary
+*.png binary
