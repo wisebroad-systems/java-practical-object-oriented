@@ -54,7 +54,11 @@ java -cp out Main
 | | [step](chapter03/step/README.md) | 明細と数量を導入する（小計はまだ注文が計算する） | 未公開 |
 | | [end](chapter03/end/README.md) | 小計の計算を明細に任せる | 未公開 |
 
-第4章以降は準備中です。公開した段階から、この一覧に追加します。
+| [第4章](chapter04/README.md) 振る舞いの違いを同じように扱う | [start](chapter04/start/README.md) | 第3章の終了時点 | 未公開 |
+| | [step](chapter04/step/README.md) | 支払いを条件分岐で扱う（支払い方法ごとに`case`が増える） | 未公開 |
+| | [end](chapter04/end/README.md) | 支払い方法を共通の要求（`PaymentMethod`）で扱う | 未公開 |
+
+第5章以降は準備中です。公開した段階から、この一覧に追加します。
 
 ## 任意：Gradle・テスト・整形
 
@@ -99,7 +103,7 @@ pwsh -File scripts/verify.ps1
 
 | 環境 | 確認の方法 | 状況 |
 |---|---|---|
-| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜3章の全段階で確認済み（2026-10-04）。新しい段階は、公開前に確認します |
+| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜3章の全段階で確認済み（2026-10-04）。第4章は確認待ちです |
 | Ubuntu 24.04（GitHub Actions） | `scripts/verify.ps1`で、pushのたびに全段階を確認 | [![verify](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml/badge.svg)](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml) |
 
 これ以外の環境（macOS、ほかのバージョンのJavaなど）での動作は保証していません。
