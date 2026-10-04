@@ -8,7 +8,17 @@ dependencyResolutionManagement {
 
 // 公開する段階の一覧。Gradleのプロジェクト名と、実際のディレクトリを対応付ける。
 // 段階を公開するときに、ここへ追加する。
-val stages = mapOf("chapter01-start" to "chapter01/start")
+val stages =
+    mapOf(
+        "chapter01-start" to "chapter01/start",
+        "chapter01-end" to "chapter01/end",
+        "chapter02-start" to "chapter02/start",
+        "chapter02-step" to "chapter02/step",
+        "chapter02-end" to "chapter02/end",
+        "chapter03-start" to "chapter03/start",
+        "chapter03-step" to "chapter03/step",
+        "chapter03-end" to "chapter03/end",
+    )
 
 stages.forEach { (name, directory) ->
     include(name)
