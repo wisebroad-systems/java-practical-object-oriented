@@ -19,7 +19,7 @@ java -version
 javac -version
 ```
 
-Windowsでの詳しい準備手順は、準備中です。
+Windowsでの詳しい準備手順は、[docs/setup-windows.md](docs/setup-windows.md)にあります。
 
 ## 最初の実行
 
@@ -46,8 +46,15 @@ java -cp out Main
 | 章 | 段階 | 内容 | 本文 |
 |---|---|---|---|
 | [第1章](chapter01/README.md) 「クラスを作る」だけがオブジェクト指向ではない | [start](chapter01/start/README.md) | 会計表示と注文確認で、同じ合計の計算が重複している | 未公開 |
+| | [end](chapter01/end/README.md) | 合計の計算を注文に任せる | 未公開 |
+| [第2章](chapter02/README.md) オブジェクトに自分の状態を守らせる | [start](chapter02/start/README.md) | 第1章の終了時点 | 未公開 |
+| | [step](chapter02/step/README.md) | 追加と確定の操作を導入する（一覧からの抜け道が残る） | 未公開 |
+| | [end](chapter02/end/README.md) | 一覧を変更できない形で公開する | 未公開 |
+| [第3章](chapter03/README.md) オブジェクト同士に仕事を分担させる | [start](chapter03/start/README.md) | 第2章の終了時点 | 未公開 |
+| | [step](chapter03/step/README.md) | 明細と数量を導入する（小計はまだ注文が計算する） | 未公開 |
+| | [end](chapter03/end/README.md) | 小計の計算を明細に任せる | 未公開 |
 
-ほかの章・段階は準備中です。公開した段階から、この一覧に追加します。
+第4章以降は準備中です。公開した段階から、この一覧に追加します。
 
 ## 任意：Gradle・テスト・整形
 
@@ -58,6 +65,7 @@ java -cp out Main
 | やりたいこと | コマンド（PowerShell） |
 |---|---|
 | ある段階を実行する | `.\gradlew.bat :chapter01-start:run` |
+| 拒否する操作の確認を実行する | `.\gradlew.bat :chapter02-end:run -PmainClass=RejectionExamples` |
 | ある段階のテストを実行する | `.\gradlew.bat :chapter01-start:test` |
 | すべての段階のテストを実行する | `.\gradlew.bat test` |
 | 整形を確認する | `.\gradlew.bat spotlessCheck` |
@@ -75,6 +83,23 @@ PowerShellでGradleから実行すると、実行結果の日本語が文字化�
 
 この設定は、そのウィンドウを閉じるまで有効です。本書の標準の手順（`javac`と`java`）は、この設定をしなくても正しく表示されます。
 
+### すべての段階をまとめて検証する
+
+`scripts/verify.ps1`は、公開しているすべての段階について、`javac`・`java`での実行結果、Gradleでの実行結果、テスト、整形を確かめるスクリプトです。PowerShell 7.6以降で、リポジトリのルートから実行します。
+
+```powershell
+pwsh -File scripts/verify.ps1
+```
+
+結果は`build/verify/`にログとして保存されます。期待する実行結果は`scripts/expected/`にあります。
+
 ## 動作確認の範囲
 
-動作確認の対象は、Java 25・Windows 11の実機と、GitHub ActionsのUbuntu 24.04です。いずれも準備中で、検証の結果は公開時にここへ記載します。
+動作確認の対象は、Java 25と、次の2つの環境です。
+
+| 環境 | 確認の方法 | 状況 |
+|---|---|---|
+| Windows 11（x64）・PowerShell | 実機で確認 | 第1章の`start`で確認済み（2026-10-04）。ほかの段階は、公開前に確認します |
+| Ubuntu 24.04（GitHub Actions） | `scripts/verify.ps1`で、pushのたびに全段階を確認 | [![verify](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml/badge.svg)](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml) |
+
+これ以外の環境（macOS、ほかのバージョンのJavaなど）での動作は保証していません。
