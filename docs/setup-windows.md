@@ -1,6 +1,6 @@
 # Windowsでの準備
 
-本書のサンプルコードを、Windows 11（x64）で実行するための準備です。必要なのは、Java 25の開発環境（JDK）と、PowerShell 7.6の2つです。GradleやGit、JUnitを別に入れる必要はありません。
+本書のサンプルコードを、Windows 11（x64）で実行するための準備です。必要なのは、Java 25の開発環境（JDK）だけです。コマンドは、Windowsに標準で入っているPowerShell（Windows PowerShell）で実行します。PowerShell 7を使っている場合も、同じ手順で動きます。GradleやGit、JUnitを別に入れる必要はありません。
 
 すでに準備できている場合は、最後の「準備ができたかを確かめる」だけを行ってください。
 
@@ -15,26 +15,23 @@
 
 詳しい手順は、[TemurinのWindows向けインストール案内](https://adoptium.net/installation/windows/)を参照してください。
 
-## 2. PowerShell 7.6を入れる
+## 2. 準備ができたかを確かめる
 
-Windowsには、もともと「Windows PowerShell」（バージョン5.1）が入っています。本書で使う「PowerShell 7」はこれとは別のもので、両方が並んで存在します。
-
-[MicrosoftのPowerShellのインストール案内](https://learn.microsoft.com/ja-jp/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.6)に従って、PowerShell 7.6を入れてください（MSIのインストーラーを使う方法があります）。
-
-入れた後は、スタートメニューから「PowerShell 7」を開いて使います。「Windows PowerShell」ではないことに注意してください。
-
-## 3. 準備ができたかを確かめる
-
-新しく開いたPowerShell 7で、次のコマンドを実行します。設定を反映させるため、インストールの前から開いていたウィンドウは使わないでください。
+PowerShellを新しく開き、次のコマンドを実行します。設定を反映させるため、インストールの前から開いていたウィンドウは使わないでください。
 
 | 確かめること | コマンド | 正しい状態 |
 |---|---|---|
 | Javaの実行環境 | `java -version` | `25`と`Temurin`が表示される |
 | コンパイラー | `javac -version` | `javac 25`で始まる |
-| PowerShell | `$PSVersionTable.PSVersion` | `7.6`で始まる |
 | JDKの場所 | `$env:JAVA_HOME` | Temurin 25のJDKのディレクトリが表示される |
 
 ここまでできたら、[README](../README.md#最初の実行)の「最初の実行」に進んでください。
+
+## 任意：PowerShell 7.6を入れる
+
+すべての段階をまとめて検証するスクリプト（`scripts/verify.ps1`）を使う場合だけ、PowerShell 7.6が必要です。本書の手順を進めるだけなら、入れる必要はありません。
+
+[MicrosoftのPowerShellのインストール案内](https://learn.microsoft.com/ja-jp/powershell/scripting/install/install-powershell-on-windows?view=powershell-7.6)に従って入れてください（MSIのインストーラーを使う方法があります）。PowerShell 7は、Windowsに標準で入っているWindows PowerShell（バージョン5.1）とは別のもので、両方が並んで存在します。入れた後は、スタートメニューから「PowerShell 7」を開き、`$PSVersionTable.PSVersion`が`7.6`で始まることを確かめてから、`pwsh -File scripts/verify.ps1`を実行します。
 
 ## 困ったときは
 

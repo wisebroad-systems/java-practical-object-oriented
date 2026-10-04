@@ -10,7 +10,7 @@ Zennの本『Javaで学ぶ実践オブジェクト指向』のサンプルコー
 ## 必要な環境
 
 - Java 25（JDK）。本書ではEclipse Temurin 25で確認しています。
-- 基準とする環境は、Windows 11とPowerShell 7.6です。コマンドはbashなどでも同じです。
+- 基準とする環境は、Windows 11と、Windowsに標準で入っているPowerShell（Windows PowerShell）です。PowerShell 7でも、bashなどでも、同じコマンドで動きます。
 
 次のコマンドで、`java`と`javac`がどちらも25であることを確かめてください。
 
@@ -85,7 +85,7 @@ PowerShellでGradleから実行すると、実行結果の日本語が文字化�
 
 ### すべての段階をまとめて検証する
 
-`scripts/verify.ps1`は、公開しているすべての段階について、`javac`・`java`での実行結果、Gradleでの実行結果、テスト、整形を確かめるスクリプトです。PowerShell 7.6以降で、リポジトリのルートから実行します。
+`scripts/verify.ps1`は、公開しているすべての段階について、`javac`・`java`での実行結果、Gradleでの実行結果、テスト、整形を確かめるスクリプトです。このスクリプトだけは、PowerShell 7.6以降が必要です（Windowsに標準で入っているWindows PowerShell 5.1では動きません）。PowerShell 7.6の入れ方は、[docs/setup-windows.md](docs/setup-windows.md#任意powershell-76を入れる)にあります。リポジトリのルートから実行します。
 
 ```powershell
 pwsh -File scripts/verify.ps1
