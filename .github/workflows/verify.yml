@@ -1,0 +1,47 @@
+name: verify
+
+# 公開しているすべての段階を検証する（scripts/verify.ps1をWindows実機と共用）。
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PWSH_VERSION: 7.6.6
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 25
+          cache: gradle
+
+      - name: Install PowerShell ${{ env.PWSH_VERSION }}
+        run: |
+          dir="$RUNNER_TEMP/pwsh-$PWSH_VERSION"
+          mkdir -p "$dir"
+          curl -fsSL "https://github.com/PowerShell/PowerShell/releases/download/v$PWSH_VERSION/powershell-$PWSH_VERSION-linux-x64.tar.gz" | tar -xz -C "$dir"
+          chmod +x "$dir/pwsh"
+          echo "$dir" >> "$GITHUB_PATH"
+
+      - name: Verify all stages
+        run: pwsh -NoProfile -File scripts/verify.ps1
+
+      - name: Upload logs and test reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: verify-results
+          path: |
+            build/verify/
+            chapter*/*/build/reports/tests/
+          if-no-files-found: ignore
