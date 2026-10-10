@@ -53,11 +53,9 @@ java -cp out Main
 | [第3章](chapter03/README.md) オブジェクト同士に仕事を分担させる | [start](chapter03/start/README.md) | 第2章の終了時点 | 未公開 |
 | | [step](chapter03/step/README.md) | 明細と数量を導入する（小計はまだ注文が計算する） | 未公開 |
 | | [end](chapter03/end/README.md) | 小計の計算を明細に任せる | 未公開 |
-
 | [第4章](chapter04/README.md) 振る舞いの違いを同じように扱う | [start](chapter04/start/README.md) | 第3章の終了時点 | 未公開 |
 | | [step](chapter04/step/README.md) | 支払いを条件分岐で扱う（支払い方法ごとに`case`が増える） | 未公開 |
 | | [end](chapter04/end/README.md) | 支払い方法を共通の要求（`PaymentMethod`）で扱う | 未公開 |
-
 | [第5章](chapter05/README.md) 継承はいつ使う？ | [start](chapter05/start/README.md) | 第4章の終了時点 | 未公開 |
 | | [step](chapter05/step/README.md) | 継承の案（店内とテイクアウトを`Order`のサブクラスにする） | 未公開 |
 | | [end](chapter05/end/README.md) | コンポジションの案（注文が提供方法を持つ） | 未公開 |
@@ -107,7 +105,7 @@ pwsh -File scripts/verify.ps1
 
 | 環境 | 確認の方法 | 状況 |
 |---|---|---|
-| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜4章の全段階で確認済み（2026-10-04）。第5章は確認待ちです |
+| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜5章の全段階で確認済み（2026-10-10）。新しい段階は、公開前に確認します |
 | Ubuntu 24.04（GitHub Actions） | `scripts/verify.ps1`で、pushのたびに全段階を確認 | [![verify](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml/badge.svg)](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml) |
 
 これ以外の環境（macOS、ほかのバージョンのJavaなど）での動作は保証していません。
