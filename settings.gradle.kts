@@ -21,6 +21,9 @@ val stages =
         "chapter04-start" to "chapter04/start",
         "chapter04-step" to "chapter04/step",
         "chapter04-end" to "chapter04/end",
+        "chapter05-start" to "chapter05/start",
+        "chapter05-step" to "chapter05/step",
+        "chapter05-end" to "chapter05/end",
     )
 
 stages.forEach { (name, directory) ->

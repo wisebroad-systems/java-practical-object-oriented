@@ -58,7 +58,11 @@ java -cp out Main
 | | [step](chapter04/step/README.md) | 支払いを条件分岐で扱う（支払い方法ごとに`case`が増える） | 未公開 |
 | | [end](chapter04/end/README.md) | 支払い方法を共通の要求（`PaymentMethod`）で扱う | 未公開 |
 
-第5章以降は準備中です。公開した段階から、この一覧に追加します。
+| [第5章](chapter05/README.md) 継承はいつ使う？ | [start](chapter05/start/README.md) | 第4章の終了時点 | 未公開 |
+| | [step](chapter05/step/README.md) | 継承の案（店内とテイクアウトを`Order`のサブクラスにする） | 未公開 |
+| | [end](chapter05/end/README.md) | コンポジションの案（注文が提供方法を持つ） | 未公開 |
+
+第6章以降は準備中です。公開した段階から、この一覧に追加します。
 
 ## 任意：Gradle・テスト・整形
 
@@ -103,7 +107,7 @@ pwsh -File scripts/verify.ps1
 
 | 環境 | 確認の方法 | 状況 |
 |---|---|---|
-| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜4章の全段階で確認済み（2026-10-04）。新しい段階は、公開前に確認します |
+| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜4章の全段階で確認済み（2026-10-04）。第5章は確認待ちです |
 | Ubuntu 24.04（GitHub Actions） | `scripts/verify.ps1`で、pushのたびに全段階を確認 | [![verify](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml/badge.svg)](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml) |
 
 これ以外の環境（macOS、ほかのバージョンのJavaなど）での動作は保証していません。
