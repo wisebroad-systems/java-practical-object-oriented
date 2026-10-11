@@ -1,0 +1,7 @@
+内容を確定して保存：order-001、CONTENT_CONFIRMED
+決済の依頼：カード（card-0001）、1700円
+初回の結果：false
+保存されている注文：order-001、AMOUNT_FIXED、お支払い1700円
+決済の依頼：カード（card-0001）、1700円
+再試行の結果：true
+保存されている注文：order-001、PAID、お支払い1700円

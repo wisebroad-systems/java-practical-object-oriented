@@ -5,7 +5,7 @@ Zennの本『Javaで学ぶ実践オブジェクト指向』のサンプルコー
 - 本：準備中（本文は未公開です。公開したらリンクを追加します）
 - ライセンス：[MIT License](LICENSE)（Copyright (c) 2026 chrono1119）
 
-各章のコードは、`start`（開始時点）・`step`（途中段階）・`end`（終了時点）のディレクトリに分かれています。どの段階も、ほかの段階に頼らずに単独でコンパイル・実行できます。
+各章のコードは、`start`（開始時点）・`step`（途中段階）・`end`（終了時点）のディレクトリに分かれています（第8章は途中段階が3つあるので`step01`〜`step03`です）。第9章には、章末のAdvanced課題の解説例（`advanced`）もあります。どの段階も、ほかの段階に頼らずに単独でコンパイル・実行できます。
 
 ## 必要な環境
 
@@ -70,8 +70,12 @@ java -cp out Main
 | | [step02](chapter08/step02/README.md) | 保存を注文の保存先（`OrderRepository`）に任せる | 未公開 |
 | | [step03](chapter08/step03/README.md) | カード・QRコードが決済の代替実装を直接使う（決済先を差し替えられない） | 未公開 |
 | | [end](chapter08/end/README.md) | 決済の窓口（`PaymentGateway`）を外から渡す | 未公開 |
+| [第9章](chapter09/README.md) Serviceには何を書くべきか？ | [start](chapter09/start/README.md) | 第8章の終了時点 | 未公開 |
+| | [step](chapter09/step/README.md) | 進め方をServiceに移す（初回と再試行に同じ部分が残る） | 未公開 |
+| | [end](chapter09/end/README.md) | 共通する支払いの部分をServiceの中でまとめる | 未公開 |
+| | [advanced](chapter09/advanced/README.md) | Advanced課題「確定後にクーポンが提示されたら？」の解説例（任意） | 未公開 |
 
-第9章以降は準備中です。公開した段階から、この一覧に追加します。
+第10章は準備中です。公開した段階から、この一覧に追加します。
 
 ## 任意：Gradle・テスト・整形
 
@@ -116,7 +120,7 @@ pwsh -File scripts/verify.ps1
 
 | 環境 | 確認の方法 | 状況 |
 |---|---|---|
-| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜8章の全段階で確認済み（2026-10-11） |
+| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜8章の全段階で確認済み（2026-10-11）。第9章は確認待ちです |
 | Ubuntu 24.04（GitHub Actions） | `scripts/verify.ps1`で、pushのたびに全段階を確認 | [![verify](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml/badge.svg)](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml) |
 
 これ以外の環境（macOS、ほかのバージョンのJavaなど）での動作は保証していません。
