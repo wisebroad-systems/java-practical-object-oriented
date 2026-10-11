@@ -65,8 +65,13 @@ java -cp out Main
 | [第7章](chapter07/README.md) 変わりやすいルールを分ける | [start](chapter07/start/README.md) | 第6章の終了時点 | 未公開 |
 | | [step](chapter07/step/README.md) | 割引を注文の中で計算する（割引の種類ごとに`case`が増える） | 未公開 |
 | | [end](chapter07/end/README.md) | 割引額の計算を割引方針（`DiscountPolicy`）に任せる | 未公開 |
+| [第8章](chapter08/README.md) 外部の仕組みとの境界を作る | [start](chapter08/start/README.md) | 第7章の終了時点 | 未公開 |
+| | [step01](chapter08/step01/README.md) | 注文IDを導入し、呼び出し側が`Map`で保存する | 未公開 |
+| | [step02](chapter08/step02/README.md) | 保存を注文の保存先（`OrderRepository`）に任せる | 未公開 |
+| | [step03](chapter08/step03/README.md) | カード・QRコードが決済の代替実装を直接使う（決済先を差し替えられない） | 未公開 |
+| | [end](chapter08/end/README.md) | 決済の窓口（`PaymentGateway`）を外から渡す | 未公開 |
 
-第8章以降は準備中です。公開した段階から、この一覧に追加します。
+第9章以降は準備中です。公開した段階から、この一覧に追加します。
 
 ## 任意：Gradle・テスト・整形
 
@@ -111,7 +116,7 @@ pwsh -File scripts/verify.ps1
 
 | 環境 | 確認の方法 | 状況 |
 |---|---|---|
-| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜7章の全段階で確認済み（2026-10-10） |
+| Windows 11（x64）・PowerShell | 実機で`scripts/verify.ps1`を実行して確認 | 第1〜7章の全段階で確認済み（2026-10-10）。第8章は確認待ちです |
 | Ubuntu 24.04（GitHub Actions） | `scripts/verify.ps1`で、pushのたびに全段階を確認 | [![verify](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml/badge.svg)](https://github.com/wisebroad-systems/java-practical-object-oriented/actions/workflows/verify.yml) |
 
 これ以外の環境（macOS、ほかのバージョンのJavaなど）での動作は保証していません。
