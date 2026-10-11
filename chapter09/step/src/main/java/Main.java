@@ -2,19 +2,20 @@ public class Main {
     public static void main(String[] args) {
         OrderRepository repository = new InMemoryOrderRepository();
         OrderApplicationService service = new OrderApplicationService(repository);
+        OrderId orderId = new OrderId("order-001");
 
         Order order = createOrder();
         PaymentGateway failingGateway = new FakePaymentGateway(false);
         PaymentMethod firstCard = new CardPayment("card-0001", failingGateway);
         boolean first = service.confirmAndPay(order, new CouponDiscountPolicy(), firstCard);
         System.out.println("初回の結果：" + first);
-        show("保存されている注文", repository.getById(new OrderId("order-001")));
+        show("保存されている注文", repository.getById(orderId));
 
         PaymentGateway workingGateway = new FakePaymentGateway(true);
         PaymentMethod retryCard = new CardPayment("card-0001", workingGateway);
-        boolean retry = service.retryPayment(new OrderId("order-001"), retryCard);
+        boolean retry = service.retryPayment(orderId, retryCard);
         System.out.println("再試行の結果：" + retry);
-        show("保存されている注文", repository.getById(new OrderId("order-001")));
+        show("保存されている注文", repository.getById(orderId));
 
         Order freeOrder = createFreeOrder();
         PaymentMethod freeCard = new CardPayment("card-0002", workingGateway);
