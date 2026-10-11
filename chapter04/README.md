@@ -4,7 +4,7 @@
 
 > 支払い方法は違っても、「支払う」という意味では同じではないでしょうか？
 
-- 本文：未公開（公開したらリンクを追加します）
+- 本文：[第4章　振る舞いの違いを同じように扱う](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch04-polymorphism)
 
 ## 段階
 

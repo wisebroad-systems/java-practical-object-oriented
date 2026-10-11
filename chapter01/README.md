@@ -4,7 +4,7 @@
 
 > 注文の合計金額を計算するのは、誰の仕事でしょうか？
 
-- 本文：未公開（公開したらリンクを追加します）
+- 本文：[第1章　「クラスを作る」だけがオブジェクト指向ではない](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch01-responsibility)
 
 ## 段階
 

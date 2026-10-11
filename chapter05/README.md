@@ -4,7 +4,7 @@
 
 > 「種類が違う」なら、必ず継承すればよいのでしょうか？
 
-- 本文：未公開（公開したらリンクを追加します）
+- 本文：[第5章　継承はいつ使う？](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch05-inheritance)
 
 ## 段階
 

@@ -2,7 +2,7 @@
 
 Zennの本『実践オブジェクト指向 ― 「誰の責任か」から考える設計』のサンプルコードです。ひとつのレストランの注文システムを、章を追うごとに少しずつ育てながら、オブジェクト指向で設計を考える力を身につけることを目指します。
 
-- 本：準備中（本文は未公開です。公開したらリンクを追加します）
+- 本：[実践オブジェクト指向 ― 「誰の責任か」から考える設計](https://zenn.dev/wb_chrono/books/java-practical-object-oriented)（Zennの本、無料）
 - ライセンス：サンプルコードは[MIT License](LICENSE)（Copyright (c) 2026 chrono1119）です。本の本文の著作権は、chrono1119が有しています（MIT Licenseは本文には適用されません）。本に掲載したコードは、このリポジトリのサンプルコードと同じく、MIT Licenseで利用できます。
 
 各章のコードは、`start`（開始時点）・`step`（途中段階）・`end`（終了時点）のディレクトリに分かれています（第8章は途中段階が3つあるので`step01`〜`step03`です）。第9章には、章末のAdvanced課題の解説例（`advanced`）もあります。どの段階も、ほかの段階に頼らずに単独でコンパイル・実行できます。
@@ -45,37 +45,37 @@ java -cp out Main
 
 | 章 | 段階 | 内容 | 本文 |
 |---|---|---|---|
-| [第1章](chapter01/README.md) 「クラスを作る」だけがオブジェクト指向ではない | [start](chapter01/start/README.md) | 会計表示と注文確認で、同じ合計の計算が重複している | 未公開 |
-| | [end](chapter01/end/README.md) | 合計の計算を注文に任せる | 未公開 |
-| [第2章](chapter02/README.md) オブジェクトに自分の状態を守らせる | [start](chapter02/start/README.md) | 第1章の終了時点 | 未公開 |
-| | [step](chapter02/step/README.md) | 追加と確定の操作を導入する（一覧からの抜け道が残る） | 未公開 |
-| | [end](chapter02/end/README.md) | 一覧を変更できない形で公開する | 未公開 |
-| [第3章](chapter03/README.md) オブジェクト同士に仕事を分担させる | [start](chapter03/start/README.md) | 第2章の終了時点 | 未公開 |
-| | [step](chapter03/step/README.md) | 明細と数量を導入する（小計はまだ注文が計算する） | 未公開 |
-| | [end](chapter03/end/README.md) | 小計の計算を明細に任せる | 未公開 |
-| [第4章](chapter04/README.md) 振る舞いの違いを同じように扱う | [start](chapter04/start/README.md) | 第3章の終了時点 | 未公開 |
-| | [step](chapter04/step/README.md) | 支払いを条件分岐で扱う（支払い方法ごとに`case`が増える） | 未公開 |
-| | [end](chapter04/end/README.md) | 支払い方法を共通の要求（`PaymentMethod`）で扱う | 未公開 |
-| [第5章](chapter05/README.md) 継承はいつ使う？ | [start](chapter05/start/README.md) | 第4章の終了時点 | 未公開 |
-| | [step](chapter05/step/README.md) | 継承の案（店内とテイクアウトを`Order`のサブクラスにする） | 未公開 |
-| | [end](chapter05/end/README.md) | コンポジションの案（注文が提供方法を持つ） | 未公開 |
-| [第6章](chapter06/README.md) 値にも意味を持たせる | [start](chapter06/start/README.md) | 第5章の終了時点 | 未公開 |
-| | [step](chapter06/step/README.md) | 金額を`Money`で表す（数量はまだ`int`） | 未公開 |
-| | [end](chapter06/end/README.md) | 数量も`Quantity`で表す | 未公開 |
-| [第7章](chapter07/README.md) 変わりやすいルールを分ける | [start](chapter07/start/README.md) | 第6章の終了時点 | 未公開 |
-| | [step](chapter07/step/README.md) | 割引を注文の中で計算する（割引の種類ごとに`case`が増える） | 未公開 |
-| | [end](chapter07/end/README.md) | 割引額の計算を割引方針（`DiscountPolicy`）に任せる | 未公開 |
-| [第8章](chapter08/README.md) 外部の仕組みとの境界を作る | [start](chapter08/start/README.md) | 第7章の終了時点 | 未公開 |
-| | [step01](chapter08/step01/README.md) | 注文IDを導入し、呼び出し側が`Map`で保存する | 未公開 |
-| | [step02](chapter08/step02/README.md) | 保存を注文の保存先（`OrderRepository`）に任せる | 未公開 |
-| | [step03](chapter08/step03/README.md) | カード・QRコードが決済の代替実装を直接使う（決済先を差し替えられない） | 未公開 |
-| | [end](chapter08/end/README.md) | 決済の窓口（`PaymentGateway`）を外から渡す | 未公開 |
-| [第9章](chapter09/README.md) Serviceには何を書くべきか？ | [start](chapter09/start/README.md) | 第8章の終了時点 | 未公開 |
-| | [step](chapter09/step/README.md) | 進め方をServiceに移す（初回と再試行に同じ部分が残る） | 未公開 |
-| | [end](chapter09/end/README.md) | 共通する支払いの部分をServiceの中でまとめる | 未公開 |
-| | [advanced](chapter09/advanced/README.md) | Advanced課題「確定後にクーポンが提示されたら？」の解説例（任意） | 未公開 |
+| [第1章](chapter01/README.md) 「クラスを作る」だけがオブジェクト指向ではない | [start](chapter01/start/README.md) | 会計表示と注文確認で、同じ合計の計算が重複している | [第1章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch01-responsibility) |
+| | [end](chapter01/end/README.md) | 合計の計算を注文に任せる | |
+| [第2章](chapter02/README.md) オブジェクトに自分の状態を守らせる | [start](chapter02/start/README.md) | 第1章の終了時点 | [第2章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch02-encapsulation) |
+| | [step](chapter02/step/README.md) | 追加と確定の操作を導入する（一覧からの抜け道が残る） | |
+| | [end](chapter02/end/README.md) | 一覧を変更できない形で公開する | |
+| [第3章](chapter03/README.md) オブジェクト同士に仕事を分担させる | [start](chapter03/start/README.md) | 第2章の終了時点 | [第3章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch03-collaboration) |
+| | [step](chapter03/step/README.md) | 明細と数量を導入する（小計はまだ注文が計算する） | |
+| | [end](chapter03/end/README.md) | 小計の計算を明細に任せる | |
+| [第4章](chapter04/README.md) 振る舞いの違いを同じように扱う | [start](chapter04/start/README.md) | 第3章の終了時点 | [第4章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch04-polymorphism) |
+| | [step](chapter04/step/README.md) | 支払いを条件分岐で扱う（支払い方法ごとに`case`が増える） | |
+| | [end](chapter04/end/README.md) | 支払い方法を共通の要求（`PaymentMethod`）で扱う | |
+| [第5章](chapter05/README.md) 継承はいつ使う？ | [start](chapter05/start/README.md) | 第4章の終了時点 | [第5章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch05-inheritance) |
+| | [step](chapter05/step/README.md) | 継承の案（店内とテイクアウトを`Order`のサブクラスにする） | |
+| | [end](chapter05/end/README.md) | コンポジションの案（注文が提供方法を持つ） | |
+| [第6章](chapter06/README.md) 値にも意味を持たせる | [start](chapter06/start/README.md) | 第5章の終了時点 | [第6章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch06-value-object) |
+| | [step](chapter06/step/README.md) | 金額を`Money`で表す（数量はまだ`int`） | |
+| | [end](chapter06/end/README.md) | 数量も`Quantity`で表す | |
+| [第7章](chapter07/README.md) 変わりやすいルールを分ける | [start](chapter07/start/README.md) | 第6章の終了時点 | [第7章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch07-change-reasons) |
+| | [step](chapter07/step/README.md) | 割引を注文の中で計算する（割引の種類ごとに`case`が増える） | |
+| | [end](chapter07/end/README.md) | 割引額の計算を割引方針（`DiscountPolicy`）に任せる | |
+| [第8章](chapter08/README.md) 外部の仕組みとの境界を作る | [start](chapter08/start/README.md) | 第7章の終了時点 | [第8章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch08-boundaries) |
+| | [step01](chapter08/step01/README.md) | 注文IDを導入し、呼び出し側が`Map`で保存する | |
+| | [step02](chapter08/step02/README.md) | 保存を注文の保存先（`OrderRepository`）に任せる | |
+| | [step03](chapter08/step03/README.md) | カード・QRコードが決済の代替実装を直接使う（決済先を差し替えられない） | |
+| | [end](chapter08/end/README.md) | 決済の窓口（`PaymentGateway`）を外から渡す | |
+| [第9章](chapter09/README.md) Serviceには何を書くべきか？ | [start](chapter09/start/README.md) | 第8章の終了時点 | [第9章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch09-service) |
+| | [step](chapter09/step/README.md) | 進め方をServiceに移す（初回と再試行に同じ部分が残る） | |
+| | [end](chapter09/end/README.md) | 共通する支払いの部分をServiceの中でまとめる | |
+| | [advanced](chapter09/advanced/README.md) | Advanced課題「確定後にクーポンが提示されたら？」の解説例（任意） | |
 
-第10章は準備中です。公開した段階から、この一覧に追加します。
+[第0章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch00-restaurant-world)（題材の紹介）と[第10章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch10-good-design)（設計の振り返り）は、コードを使わない章なので、段階のディレクトリはありません。
 
 ## 任意：Gradle・テスト・整形
 

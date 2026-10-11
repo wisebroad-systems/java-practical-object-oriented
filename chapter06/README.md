@@ -4,7 +4,7 @@
 
 > 値そのものにも、業務上の意味やルールを持たせられないでしょうか？
 
-- 本文：未公開（公開したらリンクを追加します）
+- 本文：[第6章　値にも意味を持たせる](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch06-value-object)
 
 ## 段階
 

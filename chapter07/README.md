@@ -4,7 +4,7 @@
 
 > 「注文に関係する処理」なら、すべて`Order`の責務なのでしょうか？
 
-- 本文：未公開（公開したらリンクを追加します）
+- 本文：[第7章　変わりやすいルールを分ける](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch07-change-reasons)
 
 ## 段階
 

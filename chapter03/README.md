@@ -4,7 +4,7 @@
 
 > 注文が、すべての計算をする必要があるのでしょうか？
 
-- 本文：未公開（公開したらリンクを追加します）
+- 本文：[第3章　オブジェクト同士に仕事を分担させる](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch03-collaboration)
 
 ## 段階
 

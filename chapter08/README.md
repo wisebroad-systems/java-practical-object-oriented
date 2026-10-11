@@ -4,7 +4,7 @@
 
 > 保存先・決済先を変える都合を、どこへ閉じ込めればよいでしょうか？
 
-- 本文：未公開（公開したらリンクを追加します）
+- 本文：[第8章　外部の仕組みとの境界を作る](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch08-boundaries)
 
 ## 段階
 

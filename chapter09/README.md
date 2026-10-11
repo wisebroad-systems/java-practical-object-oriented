@@ -4,7 +4,7 @@
 
 > Serviceは「何でも処理する場所」なのでしょうか？
 
-- 本文：未公開（公開したらリンクを追加します）
+- 本文：[第9章　Serviceには何を書くべきか？](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch09-service)
 
 ## 段階
 
@@ -18,4 +18,4 @@
 ## 前後の章とのつながり
 
 - 前：[第8章](../chapter08/README.md)では、保存先と決済先を、注文の保存先（`OrderRepository`）と決済の窓口（`PaymentGateway`）の裏へ閉じ込めました。
-- 次：第10章では、ここまでの設計の判断を振り返ります（準備中）。
+- 次：[第10章](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch10-good-design)では、ここまでの設計の判断を振り返ります。

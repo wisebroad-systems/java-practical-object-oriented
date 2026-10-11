@@ -4,7 +4,7 @@
 
 > オブジェクトの状態を、誰でも自由に変更できてよいのでしょうか？
 
-- 本文：未公開（公開したらリンクを追加します）
+- 本文：[第2章　オブジェクトに自分の状態を守らせる](https://zenn.dev/wb_chrono/books/java-practical-object-oriented/viewer/ch02-encapsulation)
 
 ## 段階
 
